@@ -13,7 +13,12 @@ import Server from 'magnet-spdy';
 import Session from 'magnet-session';
 
 let app = await magnet([Config, Logger, Server, Session]);
-// Server running at default port 3000
+app.application.use(async function (ctx) {
+  var session = ctx.session;
+  session.count = session.count || 0;
+  session.count++;
+  ctx.body = session.count;
+});
 ```
 server/config/session.js
 ```

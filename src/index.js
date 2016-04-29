@@ -5,9 +5,10 @@ import session from 'koa-generic-session';
 
 export default class Session extends Base {
   async setup() {
-    let options = { ...this.app.config.session };
+    let options = { ...this.config.session };
+
     options.store = new redisStore(
-      this.app.config.connections.redis.default
+      this.config.connections.redis.default
     );
 
     this.app.application.keys = options.keys;

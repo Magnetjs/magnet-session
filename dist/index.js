@@ -52,9 +52,10 @@ var Session = function (_Base) {
           while (1) {
             switch (_context.prev = _context.next) {
               case 0:
-                options = _extends({}, this.app.config.session);
+                options = _extends({}, this.config.session);
 
-                options.store = new _koaRedis2.default(this.app.config.connections.redis.default);
+
+                options.store = new _koaRedis2.default(this.config.connections.redis.default);
 
                 this.app.application.keys = options.keys;
 

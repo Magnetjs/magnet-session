@@ -2,14 +2,13 @@ import Base from 'magnet-core/dist/base';
 import redisStore from 'koa-redis';
 import convert from 'koa-convert';
 import session from 'koa-generic-session';
+import defaultConfig from './config/session';
 
 export default class Session extends Base {
   async setup() {
-    let options = { ...this.config.session };
+    let options = { ...defaultConfig, ...this.config.session };
 
-    options.store = new redisStore(
-      this.config.connections.redis.default
-    );
+    options.store = new redisStore(options.redis);
 
     this.app.application.keys = options.keys;
 

@@ -24,6 +24,10 @@ var _koaGenericSession = require('koa-generic-session');
 
 var _koaGenericSession2 = _interopRequireDefault(_koaGenericSession);
 
+var _session = require('./config/session');
+
+var _session2 = _interopRequireDefault(_session);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, arguments); return new Promise(function (resolve, reject) { function step(key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { return Promise.resolve(value).then(function (value) { return step("next", value); }, function (err) { return step("throw", err); }); } } return step("next"); }); }; }
@@ -52,10 +56,10 @@ var Session = function (_Base) {
           while (1) {
             switch (_context.prev = _context.next) {
               case 0:
-                options = _extends({}, this.config.session);
+                options = _extends({}, _session2.default, this.config.session);
 
 
-                options.store = new _koaRedis2.default(this.config.connections.redis.default);
+                options.store = new _koaRedis2.default(options.redis);
 
                 this.app.application.keys = options.keys;
 

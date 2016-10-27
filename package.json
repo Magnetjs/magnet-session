@@ -46,12 +46,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/Magnetjs/magnet-spdy.git"
+    "url": "git+ssh://git@github.com/Magnetjs/magnet-session.git"
   },
   "bugs": {
-    "url": "https://github.com/Magnetjs/magnet-spdy/issues"
+    "url": "https://github.com/Magnetjs/magnet-session/issues"
   },
-  "homepage": "https://github.com/Magnetjs/magnet-spdy#readme",
+  "homepage": "https://github.com/Magnetjs/magnet-session#readme",
   "babel": {
     "presets": [
       "es2015",

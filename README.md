@@ -1,6 +1,8 @@
 magnet-session
 ==============
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/Magnetjs/magnet-session.svg)](https://greenkeeper.io/)
+
 [![Build Status](https://travis-ci.org/Magnetjs/magnet-session.svg?branch=master)](https://travis-ci.org/Magnetjs/magnet-session)
 
 ### Usage

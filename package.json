@@ -25,7 +25,7 @@
   "dependencies": {
     "koa-convert": "^1.2.0",
     "koa-generic-session": "^1.10.2",
-    "koa-redis": "^2.0.1",
+    "koa-redis": "^4.0.0",
     "magnet-core": "^1.2.1"
   },
   "devDependencies": {
